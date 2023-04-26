@@ -1,0 +1,69 @@
+{% extends "base_files/base.html" %}
+{% load static %}
+
+{% block content %}
+    <section class="main-section"> 
+        <nav class="nav-link">
+            <img src="{% static 'images/netflix-logo-png-2582.png'%}" alt="netflix logo" height="65px" class="logo">
+            <a href="{% url 'user-login'%}" class="index-btn">sign in</a>
+        </nav> 
+
+        <div class="cover-section">
+            <h1>Unlimited movies, Tv
+                <br> shows and more</h1>
+            <article>watch anywhere, cancel anytime</article>
+            <p>ready to watch? enter your email to create or start your membership</p><br>
+            <form method="POST" action="#">
+                <input type="email" name="user-email" placeholder="email address" class="email-btn" id="user-email">
+                <button type="submit" class="custom-btn">Get started</button>
+            </form>
+        </div>
+    </section>
+    <hr>
+    <section>
+        <div class="enjoy-section">
+            <div class="word-section">
+                <h1>Enjoy on your TV.</h1>
+                <article>Watch on smart TVs, playstation, xbox, chromecast<br>
+                apple TV, blu-ray players  and more. </article>
+            </div>
+            <div class="television">
+                <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png" alt="desktop logo" class="desktop">
+                <iframe width="300" height="520" src="https://www.youtube.com/embed/UTAvGzCK6ok?controls=0&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <section>
+        <div class="text-section">
+            <div class="download-section">
+                <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.jpg">
+                <div>
+                    <h1>download your shows to watch offline</h1>
+                    <article>save your favourites easily and always havesomething to watch</article>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <section class="watch-everywhere">
+        <div class="desktop-section">
+            <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile-ke.png">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/okJGAJJI5vk?controls=0&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="watch-section">
+            <h1>watch everywhere.</h1><br>
+            <article>stream unlimited movies and tv shows on your phone, tablet, laptop and TV.</article>
+        </div>
+    </section>
+    <hr>
+    <section class="last-section">
+        <div class="kids-section">
+            <img src="https://occ-0-2435-6125.1.nflxso.net/dnm/api/v6/19OhWN2dO19C9txTON9tvTFtefw/AAAABfpnX3dbgjZ-Je8Ax3xn0kXehZm_5L6-xe6YSTq_ucht9TI5jwDMqusWZKNYT8DfGudD0_wWVVTFLiN2_kaQJumz2iivUWbIbAtF.png?r=11f">
+        </div>
+        <div class="info-section">
+            <h1>create profile for<br> kids.</h1>
+            <article>send kids on adventures with their favourite characters in a space made just for them--free with your membership</article>
+        </div>
+    </section>
+    {% endblock %}

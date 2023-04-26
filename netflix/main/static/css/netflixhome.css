@@ -1,0 +1,242 @@
+:root{
+    --main-color:red;
+    --primary-color:black;
+    --text-gray:gray;
+    --text-light:white;
+    --enjoy-section:black;
+}
+*{
+    margin:0 ;
+    padding:0;
+    box-sizing: border-box;
+    font-family:'Helvetica';
+}
+.main-section{
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(https://assets.nflxext.com/ffe/siteui/vlv3/1ecf18b2-adad-4684-bd9a-acab7f2a875f/f603a7c6-d020-45d6-93f1-1e744ee1473e/KE-en-20230116-popsignuptwoweeks-perspective_alpha_website_small.jpg);
+    font-size: larger;
+    background-position: center;
+    background-size: cover;
+}
+h1{
+    font-weight:normal;
+}
+.main-section h1{
+    color: var(--text-light);
+    font-size: 4em;
+    text-align : center;
+}
+.cover-section{
+    text-align: center;
+    margin: 0px;
+    color:var(--text-light);
+    font-size:large;
+    padding: 50px;
+
+
+}
+.index-btn{
+    border-radius: 3px;
+    background-color: red;
+    color: var(--text-light);
+    font-size:1.5em;
+    text-decoration: none;
+    padding: 5px 12px;
+    /* width: 10vw; */
+    text-align: center;
+}
+input:focus{
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+.custom-btn{
+    width: 100px;
+    height: 37px;
+    background-color: red;
+    color:var(--text-light);
+    border: none;
+    font-size: 1em;
+    border-width: 10px;
+}
+.email-btn{
+    width: 400px;
+    /* height: 60px; */
+    border: none;
+    font-size: 1em;
+    text-align: justify;
+}
+.nav-link{
+    position: relative;
+    padding: 20px 30px;
+}
+
+.nav-link .index-btn{
+    position: absolute;
+    right: 30px;
+    top: 40px;
+}
+form{
+    display: flex;
+    height: 70px;
+    align-items:flex-start;
+    justify-content: center;
+    margin-bottom: 60px;
+    position: relative;
+    z-index: 2;
+    font-size: 1.5em;
+}
+
+form input{
+    padding: 12px;
+}
+hr{
+    background-color: gray;
+    border: solid gray;
+}
+ .enjoy-section{
+    display: flex;
+    /* height: 200px; */
+    align-self:flex-start;
+    justify-content: center;
+    background-color:var(--enjoy-section);
+    color: aliceblue;
+} 
+.word-section{
+    font-size: 2em;
+    text-align: center;
+    margin: 150px 60px;
+    /* color: white; */
+}
+.word-section h1{
+    font-size:2.8em ;
+}
+.television img{
+    height: 400px;
+    width: 520px;
+}
+
+.television iframe{
+    height:300px !important;
+    width: 515px !important;
+}
+
+.television{
+    position: relative;
+}
+
+.television img{
+    position:relative;
+    z-index: 2;
+}
+.television iframe{
+    position: relative;
+    z-index: 1;
+    bottom:300px;
+}
+.text-section{
+    font-size: 1em;
+    text-align: end;
+    color: white;
+    background-color: var(--enjoy-section);
+
+
+  
+} 
+
+.download-section div h1, .download-section div article{
+    text-align: start;
+    margin-left: 16px;
+}
+
+.download-section{
+    background-color: var(--enjoy-section);
+    display: flex;
+    justify-content: flex-start;
+    /* align-self: flex-start; */
+    align-items: center;
+}
+.download-section h1{
+    font-size:4em;
+}
+.download-section article{
+    font-size:2em;
+}
+ .watch-section{
+    color: white;
+    background-color: var(--enjoy-section);
+    text-align: start;
+}
+
+.watch-everywhere{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--enjoy-section);
+}
+
+.watch-section h1{
+    font-size: 4em;
+}
+.watch-section article{
+    font-size: 2em;
+}
+.desktop-section img{
+    height: 370px;
+    width: 500px;
+}
+.desktop-section iframe{
+    height: 200px;
+    width: 300px;
+}
+.desktop-section{
+    position: relative;
+}
+.desktop-section img{
+    position: relative;
+    z-index: 2;
+}
+.desktop-section iframe{
+    position: relative;
+    z-index: 1;
+    bottom: 350px;
+    left: 100px;
+}
+.last-section{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--enjoy-section);
+}
+.info-section{
+    color: white;
+    font-size: 2em;
+}
+.info-section h1{
+    font-size: 2.5em;
+}
+.banner-movie{
+    position: relative;
+    height: 80vh;
+    background-color: rgba(0,0,0,0.5);
+}
+.banner-movie iframe{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 80vh;
+    width: 100vw;
+    z-index: -2;
+}
+.img-dimensions{
+    width: 100%;
+    height: 350px !important;
+    object-fit: cover;
+    
+}
+body{
+    background: black;
+}
+
+
+
+

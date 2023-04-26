@@ -1,0 +1,81 @@
+{% extends 'base_files/dashboard.html' %}
+{% load static %}
+{% block title %}
+    Home
+{% endblock %}
+{% block content %}
+    <h1 class="display-6 m-2">Welcome Back!</h1>
+    <div class="row">
+      <!-- the top cards  -->
+        <div class="-lg-4 col-md-4 col-sm-12">
+            <div class="card border-0 shadow m-2 w-100 top-card">
+                <div class="card-body text-center">
+                    <i class="bi bi-film m-1"></i>
+                    <h2 class="h5">Movies</h2>
+                    <p class="display-4">{{ movies.count }}</p>
+                </div>
+            </div>
+        </div>
+        
+       
+        <div class="-lg-4 col-md-4 col-sm-12">
+            <div class="card border-0 shadow m-2 w-100 top-card">
+                <div class="card-body text-center">
+                    <i class="bi bi-people-fill m-1"></i>
+                    <h2 class="h5">Users</h2>
+                    <p class="display-4">{{ users.count }}</p>
+                </div>
+            </div>        
+        </div>
+        <div class="-lg-4 col-md-4 col-sm-12">
+            <div class="card border-0 shadow m-2 w-100 top-card">
+                <div class="card-body text-center">
+                    <i class="bi bi-file-post m-1"></i>
+                    <h2 class="h5">Categories</h2>
+                    <p class="display-4">{{ categories.count }}</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- the tables -->
+        <div class="col-lg-6 col-md-6 col-sm-12 mt-3">
+            <div class="card shadow mt-2">
+                <div class="card-body">
+                    <div class="text-end">
+                        <a href="{% url 'admin_add_movie' %}" class="btn-netflix">Add New Movie</a>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                              <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">MovieName</th>
+                                <th scope="col">Category</th>
+                                <th scope="col text-center">View More</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                                {% for movie in movies|slice:"5"%}
+                                <tr>
+                                    <th scope="row">{{movie.id}}</th>
+                                    <td>{{movie.title}}</td>
+                                    <td>{{movie.category.name}}</td>
+                                    <td>
+                                        <a href="{% url 'moviedetails' movie.id %}" class="btn-netflix-icon">
+                                            <!-- movie.id added after url is to pick the movieid of the clicked movie -->
+                                            <i class="bi bi-eye"></i>
+                                        </a>
+                                    </td>
+                                  </tr>
+                                {%endfor%}
+                            </tbody>
+                          </table>
+                    </div>
+                </div>
+            </div>
+        {% endblock %}        
+        </div>
+          
+        <div class="-lg-6 col-md-6 col-sm-12 mt-3"></div>
+    </div>
+{% endblock %}
